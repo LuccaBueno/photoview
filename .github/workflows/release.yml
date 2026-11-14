@@ -15,7 +15,12 @@ jobs:
       - run: python3 scripts/build.py
       - uses: softprops/action-gh-release@v2
         with:
-          files: dist/photoview-galeria.html
+          files: dist/PhotoView.html
           body: |
-            **Como usar:** baixe o arquivo `photoview-galeria.html` abaixo, abra com dois cliques e clique em **Pasta inteira**.
-            Ou use direto pelo site: https://luccabueno.github.io/photoview/
+            ## Como usar
+            1. Em **Assets**, logo abaixo, clique em **PhotoView.html** para baixar.
+            2. Abra o arquivo baixado com dois cliques (ele abre no navegador).
+            3. Clique em **Pasta inteira** e escolha a pasta das suas fotos.
+
+            Não baixe "Source code": isso é o código para programadores.
+            Prefere não baixar nada? Use pelo site: https://luccabueno.github.io/photoview/

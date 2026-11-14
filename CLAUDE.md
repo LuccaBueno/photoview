@@ -6,7 +6,7 @@ Galeria de fotos que roda 100% no navegador. Um único arquivo HTML, sem servido
 - `src/photoview.html`: HTML + CSS (tokens de cor em `:root`, tema claro/escuro). Marcadores substituídos no build: `/*__LEAFLET_CSS__*/`, `__MUNDO__`, `__CIDADES__`, `__PAISES__`, `/*__APP__*/`.
 - `src/app.js`: lógica. Módulos por seção: leitura de arquivos (`readMedia`, `readMp4`), derivados (`derive`, `computeMoments`, `detectTrips`), linha do tempo (`renderTimeline`, `Scrub`), mapa (`GeoMap`, `MapView`, `MapCfg`, `Search`), viagem (`Trip`), `LB` (visualizador), `FS` (pastas lembradas).
 - `data/cidades.json`: `[nome, país, uf, população, lat, lon, nomeOriginal?]`, em ordem de população. Gerado por `scripts/gerar-cidades.js`; traduções em `scripts/nomes-pt.json`.
-- `scripts/build.py`: gera `index.html` (GitHub Pages) e `dist/photoview-galeria.html` (download).
+- `scripts/build.py`: gera `index.html` (GitHub Pages) e `dist/PhotoView.html` (download).
 
 ## Regras
 - Sempre rode `python3 scripts/build.py` depois de editar `src/`, e faça o commit do `index.html` gerado.

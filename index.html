@@ -1043,6 +1043,7 @@ body.selecting .toast{bottom:calc(160px + env(safe-area-inset-bottom,0px))}
       <button class="btn primary" id="btnFiles" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Adicionar arquivos</button>
       <button class="btn" id="btnDir" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Pasta inteira</button>
       <button class="btn ghost" id="btnClear" type="button" hidden>Limpar tudo</button>
+      <a class="btn ghost" id="btnDownload" href="https://github.com/LuccaBueno/photoview/releases/latest/download/PhotoView.html" hidden title="Baixa um arquivo que funciona sem abrir este site"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>Baixar</a>
     </div>
     <nav class="tabs" role="tablist" aria-label="Vistas">
       <button class="tab" role="tab" data-view="linha" id="tab-linha">Linha do tempo<span class="n" id="n-linha"></span></button>
@@ -2598,6 +2599,7 @@ if (typeof d3 === "undefined" || typeof exifr === "undefined") {
   document.querySelector("main").insertAdjacentHTML("afterbegin", '<div class="empty" style="margin-top:16px">As bibliotecas da página não carregaram. Verifique a internet e recarregue.</div>');
 } else {
   Scrub.init();
+  if (/github\.io$/.test(location.hostname)) $("#btnDownload").hidden = false;
   go(location.hash.slice(1) || "linha", false);
   loadSamples();
   renderRemember();

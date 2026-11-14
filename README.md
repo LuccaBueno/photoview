@@ -9,21 +9,31 @@
 ## ⬇️ Baixar
 
 <p align="center">
-  <a href="https://github.com/LuccaBueno/photoview/releases/latest/download/photoview-galeria.html">
-    <img src="https://img.shields.io/badge/Baixar_o_PhotoView-arquivo_.html-2ea44f?style=for-the-badge" alt="Baixar o PhotoView">
+  <a href="https://github.com/LuccaBueno/photoview/releases/latest/download/PhotoView.html">
+    <img src="https://img.shields.io/badge/Baixar_o_PhotoView-Windows%2C_Mac_e_Linux-2ea44f?style=for-the-badge" alt="Baixar o PhotoView">
   </a>
+  <br>
   <a href="https://luccabueno.github.io/photoview/">
-    <img src="https://img.shields.io/badge/Usar_sem_baixar-abrir_no_navegador-1f4f9d?style=for-the-badge" alt="Usar sem baixar">
+    <img src="https://img.shields.io/badge/Ou_use_sem_baixar-abrir_no_navegador-1f4f9d?style=for-the-badge" alt="Usar sem baixar">
   </a>
 </p>
 
-1. Clique em **Baixar o PhotoView**. O arquivo `photoview-galeria.html` vai para a sua pasta Downloads.
-2. Abra o arquivo com dois cliques. Ele abre no Chrome, Edge ou Opera.
-3. Clique em **Pasta inteira** e escolha a pasta das suas fotos (por exemplo, `D:\Fotos`).
+**Em 3 passos:**
 
-Não precisa instalar nada, e o Windows não mostra aviso de segurança, porque é só uma página.
+1. Clique no botão verde **Baixar o PhotoView**. O download começa sozinho e o arquivo `PhotoView.html` vai para a sua pasta **Downloads**.
+2. Abra a pasta **Downloads** e dê **dois cliques** em `PhotoView.html`. Ele abre no navegador, como um site.
+3. Clique em **Pasta inteira** e escolha a pasta onde estão as suas fotos.
 
-> ⚠️ Não baixe "Source code (zip)" nem "Source code (tar.gz)": isso é o código-fonte para programadores, não o programa.
+Pronto. Não precisa instalar nada, e o Windows não mostra aviso de segurança, porque é só uma página.
+
+> 💡 Se o Windows perguntar **com qual programa abrir**, escolha **Google Chrome** ou **Microsoft Edge**.
+>
+> ⚠️ Não baixe **Source code (zip)** nem **Source code (tar.gz)**. Isso é o código para programadores, não o programa.
+
+<p align="center">
+  <img src="assets/tela-linha.png" width="49%" alt="Linha do tempo por meses">
+  <img src="assets/tela-viagem.png" width="49%" alt="Viagem no tempo com mapa">
+</p>
 
 ## O que ele faz
 
@@ -51,6 +61,12 @@ Sem data no arquivo, o PhotoView usa a data do nome (ex.: `IMG_20250114_093012.j
 **A data de algumas fotos está errada.**
 Na linha do tempo, clique em **Ajustar datas**, selecione as fotos e mova as datas. O arquivo original não muda. O ajuste fica salvo no navegador.
 
+**Cliquei duas vezes e abriu um editor de texto ou outro programa.**
+Clique com o botão direito em `PhotoView.html`, escolha **Abrir com** e depois **Google Chrome** ou **Microsoft Edge**.
+
+**O botão de baixar abriu uma página cheia de código.**
+Volte e clique de novo no botão verde. Se continuar, clique com o botão direito no botão e escolha **Salvar link como**.
+
 **Funciona no celular?**
 Dá para abrir, mas escolher pastas inteiras funciona melhor no computador.
 
@@ -65,7 +81,7 @@ src/photoview.html    estrutura e estilos da página
 src/app.js            toda a lógica
 data/                 mapa-múndi, cidades (GeoNames) e códigos de países
 vendor/               CSS do Leaflet
-scripts/build.py      monta index.html e dist/photoview-galeria.html
+scripts/build.py      monta index.html e dist/PhotoView.html
 ```
 
 Para montar depois de editar:

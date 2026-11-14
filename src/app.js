@@ -1375,6 +1375,7 @@ if (typeof d3 === "undefined" || typeof exifr === "undefined") {
   document.querySelector("main").insertAdjacentHTML("afterbegin", '<div class="empty" style="margin-top:16px">As bibliotecas da página não carregaram. Verifique a internet e recarregue.</div>');
 } else {
   Scrub.init();
+  if (/github\.io$/.test(location.hostname)) $("#btnDownload").hidden = false;
   go(location.hash.slice(1) || "linha", false);
   loadSamples();
   renderRemember();

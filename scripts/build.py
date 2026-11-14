@@ -4,7 +4,7 @@
 Uso:  python3 scripts/build.py
 Gera:
   index.html                  -> página do GitHub Pages (raiz do repositório)
-  dist/photoview-galeria.html -> arquivo para baixar e abrir offline
+  dist/PhotoView.html -> arquivo para baixar e abrir offline
 """
 import json
 import pathlib
@@ -34,10 +34,10 @@ def build():
         assert html.count(key) == 1, f"marcador {key} não encontrado"
         html = html.replace(key, value)
     (ROOT / "dist").mkdir(exist_ok=True)
-    for out in ("index.html", "dist/photoview-galeria.html"):
+    for out in ("index.html", "dist/PhotoView.html"):
         (ROOT / out).write_text(html, encoding="utf-8")
     size = len(html.encode("utf-8")) / 1_048_576
-    print(f"OK: index.html e dist/photoview-galeria.html ({size:.1f} MB)")
+    print(f"OK: index.html e dist/PhotoView.html ({size:.1f} MB)")
 
 
 if __name__ == "__main__":
