@@ -1,0 +1,21 @@
+name: Publicar versão
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python3 scripts/build.py
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: dist/photoview-galeria.html
+          body: |
+            **Como usar:** baixe o arquivo `photoview-galeria.html` abaixo, abra com dois cliques e clique em **Pasta inteira**.
+            Ou use direto pelo site: https://luccabueno.github.io/photoview/
